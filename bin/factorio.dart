@@ -1,5 +1,9 @@
 import 'dart:io';
 
+import 'package:factorio/Player/Player.dart';
+import 'package:factorio/Ressources/Coal.dart';
+import 'package:factorio/Ressources/Wood.dart';
+/*
 abstract class Connectable {}
 
 abstract class Updatable {
@@ -15,10 +19,7 @@ class Usine implements Connectable, Updatable {
 // Scierie, fabrique, ...
 class Scierie extends Usine {}
 
-class Resource {}
-// Bois, fer, ...
-
-class Deposit implements Connectable, Updatable {}
+abstract class Deposit implements Connectable, Updatable {}
 
 // Foret, Mine,
 class Foret extends Deposit {}
@@ -28,7 +29,7 @@ class Ville implements Connectable, Updatable {}
 class Connection implements Updatable {
   Connection(Connectable c1, Connectable c2);
 }
-
+*/
 /*
 R1 ---> Usine1  \
 R2 ---> Usine2  -\--> Usine3  ---> City
@@ -41,7 +42,7 @@ planche + clous  --> fabrique de meubles --> meuble
 meuble --> ville --> argent;
 
 */
-
+/*
 class Jeu{
   final updatables =<Updatable>[];
   void run(){
@@ -56,9 +57,10 @@ class Jeu{
   }
 
 }
-
+*/
 void main(List<String> arguments) {
-  print("hello");
+  Player player1 = Player();
+  print(player1);
   if (Platform.isWindows) {
     // not tested, I don't have Windows
     // may not to work because 'cls' is an internal command of the Windows shell
