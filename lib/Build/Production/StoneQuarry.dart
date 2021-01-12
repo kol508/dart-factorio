@@ -1,23 +1,30 @@
 import 'dart:ffi';
 import 'package:factorio/Build/abstract/Production.dart';
+import 'package:factorio/Ressources/Stone.dart';
+import 'package:factorio/Ressources/Wood.dart';
 import 'package:factorio/Ressources/abstract/Ressource.dart';
 
-class StoneQuarry extends Production{
-  @override
-  // TODO: implement buildCoast
-  List<Ressource> get buildCoast => throw UnimplementedError();
+class StoneQuarry extends Production {
+  static const int MAX_LEVEL = 3;
 
   @override
-  // TODO: implement efficiency
-  int get efficiency => throw UnimplementedError();
+  List<Ressource> get buildCoast {
+    var wood = Wood();
+    wood.addQuantity(100);
+    var stone = Stone();
+    stone.addQuantity(10);
+    return [wood, stone];
+  }
 
   @override
-  // TODO: implement level
-  int get level => throw UnimplementedError();
+  int get efficiency {
+    return level * 25;
+  }
 
   @override
-  // TODO: implement maxLevel
-  int get maxLevel => throw UnimplementedError();
+  int get maxLevel {
+    return MAX_LEVEL;
+  }
 
   @override
   // TODO: implement multiplicateur
@@ -26,5 +33,4 @@ class StoneQuarry extends Production{
   @override
   // TODO: implement upgradeCoast
   List<Ressource> get upgradeCoast => throw UnimplementedError();
-
 }

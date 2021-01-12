@@ -1,8 +1,7 @@
 import 'dart:io';
 
+import 'package:factorio/Build/Production/StoneQuarry.dart';
 import 'package:factorio/Player/Player.dart';
-import 'package:factorio/Ressources/Coal.dart';
-import 'package:factorio/Ressources/Wood.dart';
 /*
 abstract class Connectable {}
 
@@ -61,6 +60,13 @@ class Jeu{
 void main(List<String> arguments) {
   Player player1 = Player();
   print(player1);
+  var stoneQuarry = StoneQuarry();
+  print(stoneQuarry.maxLevel);
+  print(stoneQuarry.level);
+  stoneQuarry.upgradeLevel();
+  stoneQuarry.upgradeLevel();
+  stoneQuarry.upgradeLevel();
+  print(stoneQuarry.level);
   if (Platform.isWindows) {
     // not tested, I don't have Windows
     // may not to work because 'cls' is an internal command of the Windows shell
