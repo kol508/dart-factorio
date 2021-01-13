@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:factorio/GameMap.dart';
 import 'package:factorio/Player/Player.dart';
 /*
 class Jeu{
@@ -18,6 +19,8 @@ class Jeu{
 */
 void main(List<String> arguments) {
   var player1 = Player();
+  var map = GameMap.sized(16);
+  map.afficheMap();
   print(player1);
 
   if (Platform.isWindows) {
