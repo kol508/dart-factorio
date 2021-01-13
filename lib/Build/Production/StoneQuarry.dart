@@ -1,11 +1,19 @@
 import 'dart:ffi';
 import 'package:factorio/Build/abstract/Production.dart';
+import 'package:factorio/Other/Observer.dart';
 import 'package:factorio/Ressources/Stone.dart';
 import 'package:factorio/Ressources/Wood.dart';
 import 'package:factorio/Ressources/abstract/Ressource.dart';
 
 class StoneQuarry extends Production {
   static const int MAX_LEVEL = 3;
+
+  StoneQuarry(List<Observer> observers) : super(observers);
+
+  @override
+  String get name {
+    return "StoneQuarry";
+  }
 
   @override
   List<Ressource> get buildCoast {
@@ -27,7 +35,6 @@ class StoneQuarry extends Production {
   }
 
   @override
-  // TODO: implement multiplicateur
   Float get multiplicateur => throw UnimplementedError();
 
   @override
