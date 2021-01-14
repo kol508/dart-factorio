@@ -5,4 +5,7 @@ class Iron extends Ressource{
   get name {
     return "Iron";
   }
+
+  @override
+  get char => "i";
 }

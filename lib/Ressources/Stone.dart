@@ -5,4 +5,7 @@ class Stone extends Ressource {
   get name {
     return "Stone";
   }
+
+  @override
+  get char => "s";
 }

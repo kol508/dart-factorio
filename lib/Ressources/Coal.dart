@@ -4,4 +4,7 @@ class Coal extends Ressource{
   get name {
     return "Coal";
   }
+
+  @override
+  get char => "c";
 }

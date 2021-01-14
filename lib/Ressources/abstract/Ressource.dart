@@ -7,6 +7,8 @@ abstract class Ressource {
 
   get name;
 
+  get char;
+
   void addQuantity(int quantity) {
     _quantity += quantity;
   }

@@ -19,7 +19,7 @@ class Jeu{
 */
 void main(List<String> arguments) {
   var player1 = Player();
-  var map = GameMap.sized(16);
+  var map = GameMap.sized(8);
   map.afficheMap();
   print(player1);
 
