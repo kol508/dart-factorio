@@ -1,10 +1,11 @@
 import 'package:factorio/Ressources/Wood.dart';
+import 'package:factorio/Location.dart';
 
 class GameMap {
-  int _size = 8 ;
+  int _size = 4 ;
   //posMin 0:0
   //posMax size:size
-  final List _map = [];
+  List _map = [];
 
   GameMap(){
     generateMap();
@@ -16,18 +17,20 @@ class GameMap {
   }
 
   void generateMap(){
-    generateBaseMap();
-    addRessources();
+    _map = generateBaseMap();
+    //addRessources();
   }
 
-  void generateBaseMap(){
+  List generateBaseMap(){
+    var baseMap = [];
     for (var x=0; x<_size;x++){
       var line = [];
       for (var y=0; y<_size;y++){
-        line.add(Wood());
+        line.add(Toast());
       }
-      _map.add(line);
+      baseMap.add(line);
     }
+    return baseMap;
   }
 
   void addRessources(){
@@ -45,5 +48,9 @@ class GameMap {
       }
       print(line);
     }
+  }
+
+  get size {
+    return _size;
   }
 }
