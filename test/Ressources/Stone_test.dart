@@ -4,25 +4,25 @@ import 'package:test/test.dart';
 void main() {
   test("try name", (){
     var stone = Stone();
-    expect("Stone", stone.name);
+    expect(stone.name,"Stone");
   });
 
   test("try char", (){
     var stone = Stone();
-    expect("s",stone.char);
+    expect(stone.char,"s");
   });
 
   group('addQuantity', () {
     test("try add 10", () {
       var stone = Stone();
       stone.addQuantity(10);
-      expect(10,stone.quantity);
+      expect(stone.quantity,10);
     });
 
     test("try add 100",(){
       var stone = Stone();
       stone.addQuantity(100);
-      expect(100,stone.quantity);
+      expect(stone.quantity,100);
     });
   });
 
@@ -30,13 +30,13 @@ void main() {
     test("try sub 10", () {
       var stone = Stone();
       stone.subQuantity(10);
-      expect(-10, stone.quantity);
+      expect(stone.quantity,-10);
     });
 
     test("try sub 100",() {
       var stone = Stone();
       stone.subQuantity(100);
-      expect(-100, stone.quantity);
+      expect(stone.quantity,-100);
     });
   });
 }
