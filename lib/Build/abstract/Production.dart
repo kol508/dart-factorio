@@ -8,7 +8,7 @@ import 'package:factorio/Ressources/abstract/Ressource.dart';
 abstract class Production extends Observable {
   Production([List<Observer> observers]) : super(observers);
   int _level = 1;
-  List _position = [];
+  final List _position = [];
 
   List get position {
     return _position;

@@ -1,12 +1,14 @@
 import 'package:factorio/Ressources/abstract/Ressource.dart';
 
 class Wood extends Ressource{
-  get name {
-    return "Wood";
+  @override
+  String get name {
+    return 'Wood';
   }
 
-  get char {
-    return "w";
+  @override
+  String get char {
+    return 'w';
   }
 
 }

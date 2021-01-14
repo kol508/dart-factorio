@@ -1,5 +1,0 @@
-class RessourceFactory{
-  factory RessourceFactory(){
-    
-  }
-}

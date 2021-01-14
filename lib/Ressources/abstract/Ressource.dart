@@ -5,8 +5,10 @@ abstract class Ressource {
     return _quantity;
   }
 
+  // ignore: always_declare_return_types
   get name;
 
+  // ignore: always_declare_return_types
   get char;
 
   void addQuantity(int quantity) {

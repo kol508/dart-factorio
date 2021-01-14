@@ -7,7 +7,8 @@ import 'package:factorio/Ressources/Wood.dart';
 import 'package:factorio/Ressources/abstract/Ressource.dart';
 
 class Player implements Observer{
-  final name = "Player 1";
+  @override
+  final name = 'Player 1';
   final ressources = <Ressource>[];
   final building = <Production>[];
 
@@ -16,20 +17,20 @@ class Player implements Observer{
   }
 
   Player(){
-    Wood wood = Wood();
+    var wood = Wood();
     wood.addQuantity(100);
-    Stone stone = Stone();
+    var stone = Stone();
     stone.addQuantity(50);
     ressources.add(wood);
     ressources.add(stone);
   }
   @override
   String toString() {
-    return "$name : $ressources";
+    return '$name : $ressources';
   }
 
   @override
-  void set name(String _name) {
+  set name(String _name) {
     name = _name;
   }
 

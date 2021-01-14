@@ -12,7 +12,7 @@ class StoneQuarry extends Production {
 
   @override
   String get name {
-    return "StoneQuarry";
+    return 'StoneQuarry';
   }
 
   @override

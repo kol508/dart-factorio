@@ -1,23 +1,23 @@
 import 'package:factorio/GameMap.dart';
-import 'package:factorio/Location.dart';
+import 'package:factorio/Location/Location.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group("build size", () {
-    test("base size", () {
+  group('build size', () {
+    test('base size', () {
       var gameMap = GameMap();
       expect(gameMap.size, 4);
     });
 
-    test("sized", () {
+    test('sized', () {
       var size = 8;
       var gameMap = GameMap.sized(size);
       expect(gameMap.size, size);
     });
   });
 
-  group("test generate map", () {
-    test("base map generation", () {
+  group('test generate base map', () {
+    test('base map generation', () {
       var gameMap = GameMap();
       var mapGenerated = gameMap.generateBaseMap();
       var totalElement = 0;
@@ -27,7 +27,7 @@ void main() {
       expect(totalElement, 4 * 4);
     });
 
-    test("sized map generation", () {
+    test('sized map generation', () {
       var size = 8;
       var gameMap = GameMap.sized(size);
       var mapGenerated = gameMap.generateBaseMap();
@@ -38,7 +38,7 @@ void main() {
       expect(totalElement, size * size);
     });
 
-    test("base map integrity", () {
+    test('base map integrity', () {
       var gameMap = GameMap();
       var mapGenerated = gameMap.generateBaseMap();
       for (List line in mapGenerated) {
@@ -48,7 +48,7 @@ void main() {
       }
     });
 
-    test("sized map integrity", () {
+    test('sized map integrity', () {
       var gameMap = GameMap.sized(8);
       var mapGenerated = gameMap.generateBaseMap();
       for (List line in mapGenerated) {
@@ -56,6 +56,10 @@ void main() {
           expect(location, isA<Location>());
         }
       }
+    });
+
+    group('addRessourceLocation', () {
+
     });
   });
 }
